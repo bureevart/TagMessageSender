@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package TagValueUpdatedMessage;
+
+message TagValueUpdatedMessageFromObjectModel {
+  string connectionString = 1;
+  string tag_id = 2;
+  string value = 3;
+}
