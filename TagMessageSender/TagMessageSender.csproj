@@ -18,10 +18,5 @@
     <ItemGroup>
         <Protobuf Include="Protos/tag_value_updated.proto" GrpcServices="None" />
     </ItemGroup>
-    <ItemGroup>
-      <None Update="data.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
 
 </Project>
