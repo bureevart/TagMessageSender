@@ -21,9 +21,12 @@ internal class Program
     private static void Main()
     {
         Console.Write("RabbitMQ connection string (amqp://user:pass@host:port/): ");
-        var uri = Console.ReadLine()!
-                  ?? "amqp://user:user@localhost:5672/";
-
+        var uri = Console.ReadLine();
+        if (string.IsNullOrEmpty(uri))
+        {
+            uri = "amqp://user:user@localhost:5672/";
+        }
+        
         var options = new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
